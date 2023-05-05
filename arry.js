@@ -41,6 +41,33 @@ function sumIs100(number1, number2) {
 console.log(sumIs100(2,89));
 
 
+// Write a function that takes in a array of numbers as a parameter and returns
+// the second largest number in the array
 
+function findSecondLargest(numbers) {
+  numbers.sort(function(a, b) {
+    return b - a;
+  });
+  return numbers[1];
+}
+
+let numbers = [3, 5, 2, 1, 9, 7];
+let secondLargest = findSecondLargest(numbers);
+console.log(secondLargest); 
+
+
+// Write a function that takes a string as a parameter and returns true if the string 
+//is a palindrome and false otherwise
+
+function is_palindrome(str) {
+  let x=str.split("").reverse().join("")
+  if (str===x) {
+    return true
+    
+  }
+  else{
+    return false
+  }
   
-  
+}
+console.log(is_palindrome("madam"));
